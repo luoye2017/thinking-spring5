@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
+
+    <import resource="dependency-lookup-context.xml"/>
+
+    <bean id="userRepository" class="com.wangfan.ioc.overview.repository.UserRepository"
+        autowire="byType"> <!-- 自动装配 -->
+
+<!--手动注入，硬编码，比较麻烦 -->
+<!--        <property name="userList">-->
+<!--            <util:list>-->
+<!--                <ref bean="user"/>-->
+<!--                <ref bean="superUser"/>-->
+<!--            </util:list>-->
+<!--        </property>-->
+    </bean>
+</beans>
