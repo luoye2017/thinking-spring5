@@ -32,4 +32,11 @@ public class User {
                 ", name='" + name + '\'' +
                 '}';
     }
+
+    public static User createUser() {
+        User user = new User();
+        user.setId("1");
+        user.setName("王凡");
+        return user;
+    }
 }
