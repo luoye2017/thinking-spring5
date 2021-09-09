@@ -1,13 +1,10 @@
 package com.wangfan.spring.bean.definition;
 
-import com.wangfan.ioc.overview.domain.User;
 import com.wangfan.spring.bean.factory.DefaultUserFactory;
 import com.wangfan.spring.bean.factory.UserFactory;
 import org.springframework.beans.factory.config.AutowireCapableBeanFactory;
-import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import java.util.Iterator;
 import java.util.ServiceLoader;
 
 /**
