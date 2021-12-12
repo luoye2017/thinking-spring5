@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean name="user" class="com.wangfan.ioc.overview.domain.User">
+        <property name="id" value="1"/>
+        <property name="name" value="王凡"/>
+    </bean>
+
+    <bean name="superUser" class="com.wangfan.ioc.overview.domain.SuperUser"
+          parent="user" primary="true">
+        <property name="address" value="杭州"/>
+    </bean>
+
+    <bean name="userHolder" class="com.wangfan.dependency.injection.UserHolder">
+        <property name="user" ref="superUser"/>
+        <property name="id" value="1"/>
+        <property name="name" value="wangfanUserHolder"/>
+    </bean>
+
+    <bean name="person" class="com.wangfan.bean.lifecycle.pojo.Person" autowire="constructor">
+        <property name="description" value="this is a person"/>
+    </bean>
+</beans>
